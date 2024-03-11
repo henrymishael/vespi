@@ -4,8 +4,8 @@ import { BsCart } from "react-icons/bs";
 import { Link } from "react-router-dom";
 import { useSelector } from "react-redux";
 import { GiHamburgerMenu } from "react-icons/gi";
-import SideBar from "../pages/SideBar";
-import { MdCancel, MdOutlineCancel } from "react-icons/md";
+
+import { MdOutlineCancel } from "react-icons/md";
 import { ImBlog, ImBook, ImHeart, ImHome } from "react-icons/im";
 import { FaShopify } from "react-icons/fa";
 
