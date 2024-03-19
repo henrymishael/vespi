@@ -31,10 +31,10 @@ const ProductsCard = ({ product }) => {
     <div className='group relative '>
       <div
         onClick={() => handleDetails()}
-        className='w-full h-80 cursor-pointer overflow-hidden flex items-center justify-center shadow-sm'
+        className='w-full h-96 cursor-pointer overflow-hidden flex items-center justify-center shadow-sm'
       >
         <img
-          className='w-60 h-64 group-hover:scale-110 duration-500'
+          className='w-full h-full group-hover:scale-110 duration-500'
           src={product?.image}
           alt='productImage'
         />
@@ -49,7 +49,7 @@ const ProductsCard = ({ product }) => {
           <div className='flex justify-end   gap-2 relative overflow-hidden w-28'>
             <div className='flex gap-2 transform group-hover:translate-x-24 transition-transform duration-500 items-center '>
               <p className='text-gray-500 flex items-center '>
-                {product?.rating?.rate}
+                {product?.rating}.0
                 <FaStar className='text-[20px] text-yellow-600 pb-1' />
               </p>
 
@@ -59,7 +59,7 @@ const ProductsCard = ({ product }) => {
               onClick={() =>
                 dispatch(
                   addToCart({
-                    id: product?.id,
+                    id: product?._id,
                     title: product?.title,
                     image: product?.image,
                     price: product?.price,
@@ -83,7 +83,7 @@ const ProductsCard = ({ product }) => {
             {favoritesList &&
             favoritesList.length > 0 &&
             favoritesList.findIndex(
-              (productItem) => productItem.id === product?.id
+              (productItem) => productItem.id === product?._id
             ) !== -1 ? (
               <BsHeartFill className='text-red-600' />
             ) : (
@@ -92,7 +92,7 @@ const ProductsCard = ({ product }) => {
           </div>
         </div>
         <div className='absolute top-4 right-0'>
-          {product.rating.rate >= "4.0" && (
+          {product.rating < "4.0" && (
             <p className='bg-black text-white font-semibold font-titleFont px-6 py-1 italic'>
               limited
             </p>

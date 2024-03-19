@@ -21,7 +21,7 @@ const Products = ({ products }) => {
       <div className='max-w-screen-xl text-center py-10 grid lg:grid-cols-4 md:grid-cols-2  sm:grid-cols-1 gap-10 mx-10'>
         {/* <ProductsCard /> */}
         {products.map((productItem) => (
-          <ProductsCard key={productItem.id} product={productItem} />
+          <ProductsCard key={productItem._id} product={productItem} />
         ))}
       </div>
     </div>

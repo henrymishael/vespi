@@ -25,12 +25,12 @@ const Product = () => {
       <div className='max-w-screen-xl mx-10 my-10 flex flex-col lg:flex-row gap-10'>
         <div className='lg:w-2/5 relative'>
           <img
-            className='w-full h-[420px] md:h-[550px] object-cover'
+            className='w-full h-full  object-cover'
             src={details?.image}
             alt='detailsImage'
           />
           <div className='absolute top-4 right-0'>
-            {details?.rating?.rate >= "4.0" && (
+            {details?.rating >= "4.0" && (
               <p className='bg-red-500 text-white font-semibold font-titleFont px-6 py-1 italic'>
                 limited
               </p>
@@ -67,7 +67,7 @@ const Product = () => {
                 ${Math.floor(details.price)}
               </p>
               <p className='text-gray-500 flex items-center text-2xl'>
-                {details?.rating?.rate}
+                {details?.rating}.0
                 <FaStar className='text-[22px] text-yellow-600 pb-1' />
               </p>
             </div>
@@ -75,7 +75,7 @@ const Product = () => {
           <div className='flex items-center gap-2 text-base'>
             <StarRating noOfStars={5} />
             <p className='text-xs text-gray-500'>
-              ({details?.rating?.count} customers' review)
+              ({details?.oldPrice} customers' review)
             </p>
           </div>
           <p className='text-base text-gray-500 -mt-3 capitalize'>

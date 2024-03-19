@@ -16,15 +16,15 @@ const CartItem = () => {
   const productData = useSelector((state) => state.bazaar.productData);
   const dispatch = useDispatch();
   return (
-    <div className='lg:w-2/3 w-full '>
+    <div className='lg:w-2/3 w-full overflow-hidden overflow-x-scroll lg:overflow-x-hidden'>
       <div className='w-full'>
         <h2 className='font-titleFont text-2xl'>Shopping Cart</h2>
       </div>
       <div className=''>
         {productData.map((item) => (
           <div
-            key={item.id}
-            className='flex items-center justify-between gap-6 mt-6'
+            key={item._id}
+            className='flex  items-center justify-between gap-6 mt-6'
           >
             <div className='flex items-center gap-2'>
               <MdOutlineClose

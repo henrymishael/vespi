@@ -13,7 +13,7 @@ import { productsData } from "./api/Api";
 import Favorites from "./components/Favorites";
 import Product from "./components/Product";
 import Login from "./pages/Login";
-import SideBar from "./pages/SideBar";
+// import SideBar from "./pages/SideBar";
 
 const Layout = () => {
   return (
@@ -52,10 +52,6 @@ const router = createBrowserRouter([
       {
         path: "/login",
         element: <Login />,
-      },
-      {
-        path: "/sidebar",
-        element: <SideBar />,
       },
     ],
   },

@@ -42,7 +42,7 @@ const Cart = () => {
         src='https://images.pexels.com/photos/1435752/pexels-photo-1435752.jpeg?auto=compress'
         alt='cartImg'
       />
-      <div className='max-w-screen-xl mx-10 py-20 flex  flex-col lg:flex-row '>
+      <div className='max-w-screen-xl mx-3 py-20 flex  flex-col lg:flex-row '>
         <CartItem />
         <div className='lg:w-1/3 bg-[#fafafa] py-6 px-4'>
           <div className='flex flex-col gap-6 border-b-[1px] border-b-gray-400 pb-6'>

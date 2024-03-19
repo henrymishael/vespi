@@ -46,7 +46,7 @@ const Header = () => {
           />
         </div>
         {sidebar ? (
-          <div className='bg-white w-[100%] h-[200vh] flex flex-col justify-center   slide-in  text-2xl absolute px-10  pt-48  gap-20 '>
+          <div className='bg-white w-[100%] h-[200vh] flex flex-col justify-center   slide-in  text-2xl absolute px-10  pt-48  gap-20  overflow-hidden'>
             <div className='flex w-full justify-between items-center'>
               <img src={logoDark} alt='logoDark' />
               <MdOutlineCancel
